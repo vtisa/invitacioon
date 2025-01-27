@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div id="rainContainer" class="rain-container"></div>
+        <div class="message-box">
+            <p class="inicio">
+                Abre la carta para leer la invitación
+                <span class="hand">👇</span>
+            </p>
+        </div>
+        <div class="envelope">
+            <img src="/img/sobre.png" alt="Sobre de invitación" class="envelope-img">
+        </div>
+    </div>
+    
+    
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <img src="/img/lateral1.png" alt="Decoración Floral">
+            <h6>"Sé parte de nuestra historia"</h6>
+        </div>
+        <div class="lateral">
+            <img src="/img/lateral2.png" alt="Decoración Floral">  
+        </div>
+        <!-- Anuncio -->
+        <div class="announcement">
+            ¡NOS CASAMOS!
+        </div>
+
+        <div class="couple-names">
+            <span>Absalon</span>
+            <span>
+                <img src="/img/corazon.png" alt="♥">
+            </span>
+            <span>Madai</span>
+        </div>
+
+        <!-- Sección de video -->
+        <div class="video-container">
+            <video id="weddingVideo" muted autoplay playsinline loop disablePictureInPicture controlsList="nodownload nofullscreen">
+                <source src="https://videoos.netlify.app/video/video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p>Toca el <span><img src="/img/corazon.png" alt="♥"></span> para reproducir nuestro video </p>
+            
+            <div class="video-controls">
+                <button class="transparent-button" onclick="rewind()">
+                    <img src="img/retroceso.png" alt="Rewind" class="icon">
+                </button>
+                <button class="transparent-button play-button" onclick="play()">
+                    <img src="img/play.png" alt="Heart" class="icon">
+                </button>
+                <button class="transparent-button" onclick="forward()">
+                    <img src="img/avance.png" alt="Forward" class="icon">
+                </button>
+            </div>
+        </div>
+        
+
+        <div class="decoration-wrapper">
+            <img src="/img/especial1.png" alt="Decoración izquierda" class="side-decoration left-decoration">
+            <!-- Aquí va el contenido que quieras decorar -->
+            <div class="decorated-content">
+                <!-- Mensaje -->
+            <div class="message">
+                Nos encantaría celebrar este día tan especial en compañía de nuestra familia y amigos
+            </div>
+
+            <!-- Anillos -->
+            <div class="rings">
+                <img src="/img/anillo.png" alt="Anillos">
+            </div>
+            </div>
+            <img src="/img/especial2.png" alt="Decoración derecha" class="side-decoration right-decoration">
+        </div>
+        
+        
+        <!-- Pie de página -->
+        <div class="footer">
+            <p class="date">22 de Febrero del 2025</p>
+            <p class="countdown">¡Quedan pocos días!</p>
+            <div class="timer" id="countdownTimer">
+                <div class="time-box">
+                    <div id="days">00</div>
+                    <span>DÍAS</span>
+                </div>
+                <div class="time-box">
+                    <div id="hours">00</div>
+                    <span>HORAS</span>
+                </div>
+                <div class="time-box">
+                    <div id="minutes">00</div>
+                    <span>MINUTOS</span>
+                </div>
+                <div class="time-box">
+                    <div id="seconds">00</div>
+                    <span>SEGUNDOS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de imagen de la pareja con efecto GIF -->
+        <div id="existing-couple-slider" class="image-section"></div>
+
+        <!-- Cita -->
+        <div class="quote">
+            <p>"El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en toda circunstancia”
+              <br>  1ra corintios 13:7
+            </p>
+        </div>
+
+        <!-- Decoración floral -->
+        <div class="floral-image">
+            <img src="/img/adorno.png" alt="Decoración Floral" class="floral-design">
+        </div>
+
+        <!-- Detalles de los padres -->
+        <div class="additional-details">
+            <p>Con la bendición de Dios y nuestros padres:</p>
+            <div class="parents">
+                <p><strong>Padres del Novio:</strong></p>
+                <p>Guido Valqui Meléndez</p>
+                <p>Rebeca Trauco Yalta</p>
+            </div>
+            <div class="parents">
+                <p><strong>Padres de la Novia:</strong></p>
+                <p>Abel Ocas Ventura</p>
+                <p>Balbina Montenegro Cieza</p>
+            </div>
+        </div>
+        <!-- Sección de imagen adicional con efecto GIF -->
+        <div id="additional-slider" class="image-section"></div>
+        
+        <!-- Sección de ceremonia y recepción -->
+        <div class="event-section">
+            <div class="ceremony">
+                <div class="event-details">
+                    <h3>Ceremonia y recepción</h3>
+                    <p>Hora: 3:30 p.m.</p>
+                    <p>Recreo Turístico y Hospedaje Villa Maria</p>
+                    <p>Rioja</p>
+                    <a href="https://maps.app.goo.gl/Muc2tFfQVzaEeePv7" target="_blank" class="map-button">
+                        <img src="/img/iconomap.png" alt="Icono Mapa"> Ver mapa
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+
+      
+        
+
+        <!-- Sección de Regalos -->
+        <div class="gifts-section">
+            
+            <div class="decoration-wrapper">
+                <img src="/img/especial1.png" alt="Decoración izquierda" class="side-decoration left-decoration">
+                <!-- Aquí va el contenido que quieras decorar -->
+                <div class="decorated-content">
+                    <div class="gift-icon">
+                        <p class="gift-title">Contar con ustedes en nuestra boda es el mejor regalo</p>
+                        <img src="/img/regalo.png" alt="Icono de Regalo" class="gift-clickable">
+                    </div>
+                </div>
+                <img src="/img/especial2.png" alt="Decoración derecha" class="side-decoration right-decoration">
+            </div>
+
+            <div class="gift-icon">
+                <p class="gift-title">Queridos amigos y familia, su presencia es el regalo más especial para nosotros. Sin embargo, si desean apoyarnos en esta nueva etapa, pueden hacerlo a través de un depósito de amor.</p>
+                <span class="hand">👇</span>
+                <img src="/img/cerdo.png" alt="Icono de Regalo">
+            </div>
+            <div class="bank-details">
+                <p><img src="/img/bcp.jpg" alt="BCP" class="payment-icon"></p>
+                <p>43599191464015</p>
+                <p>00243519919146401565</p>
+                <p><img src="/img/yape.png" alt="Yape" class="payment-icon"> 921885930</p>
+                <p><img src="/img/plin.png" alt="Plin" class="payment-icon"> 921885930</p>
+            </div>
+        </div>
+        <!-- Decoración floral -->
+        <div class="floral-image">
+            <img src="/img/adorno.png" alt="Decoración Floral" class="floral-design">
+        </div>
+
+                <!-- Sección de Confirmación -->
+        <div class="confirmation-section">
+            <h2 class="confirmation-title">Confirmación</h2>
+            <p class="confirmation-message">Tu presencia es importante para nosotros, por favor confirma tu asistencia por WhatsApp hasta el 12 de febrero.</p>
+            <div class="whatsapp-buttons">
+                <a href="https://wa.me/51995529509?text=Nombre%20completo%20de%20las%20%20personas%20a%20asistir:%0A-%0A-" target="_blank" class="whatsapp-button">
+                    <img src="img/social.png" alt="WhatsApp Icon" class="whatsapp-icon"> Absalon
+                </a>
+                <a href="https://wa.me/51921885930?text=Nombre%20completo%20de%20las%20%20personas%20a%20asistir:%0A-%0A-" target="_blank" class="whatsapp-button">
+                    <img src="img/social.png" alt="WhatsApp Icon" class="whatsapp-icon"> Madai
+                </a>
+            </div>
+            <p class="confirmation-note">¡Te esperamos!</p>
+
+            <div class="sunflower-frame">
+                <img src="/img/adornofin.png" alt="Sunflower frame">
+                <div class="names-container">
+                  <span>Absalon</span>
+                  <div class="heart-icon">
+                    <img src="/img/corazon.png" alt="♥">
+                  </div>
+                  <span>Madai</span>
+                </div>
+            </div>
+
+            <div class="image-section">
+                <img src="https://github.com/vtisa/img/blob/main/img/pareja/final.jpg?raw=true" alt="Pareja en bicicleta">
+            </div>
+        </div>
+
+    <script src="/js/lluvia.js"></script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
