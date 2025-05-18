@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
 
     /* Color de respaldo */
-    background-image: url('img/fondo.jpg'); /* Cambia la ruta por la de tu imagen */
+    background-image: url('../img/fondo.jpg'); /* Cambia la ruta por la de tu imagen */
     background-size: cover; /* Hace que la imagen siempre cubra toda el área */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -63,7 +63,7 @@ body::before {
     top: -100px;
     width: 50px;
     height: 50px;
-    background-image: url('img/lluvia.png'); /* Imagen del anillo */
+    background-image: url('../img/lluvia.png'); /* Imagen del anillo */
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 9999;
